@@ -4669,18 +4669,12 @@ License - nucleoapp.com/license/
   font-size: 8em;
   font-weight: 700;
   margin: 0;
-  color: #FFFFFF;
-  background: #fbf8ec;
-  background: -moz-linear-gradient(top, #FFFFFF 35%, #4e6773 100%);
-  background: -webkit-linear-gradient(top, #FFFFFF 35%, #4e6773 100%);
-  background: -ms-linear-gradient(top, #FFFFFF 35%, #4e6773 100%);
-  background: linear-gradient(to bottom, #FFFFFF 35%, #4e6773 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent; }
+  color: #404040;
+  background: #fbf8ec;}
 
 .presentation-subtitle {
   font-size: 1.7em;
-  color: #FFFFFF; }
+  color: #404040; }
 
 .category-absolute {
   position: absolute;

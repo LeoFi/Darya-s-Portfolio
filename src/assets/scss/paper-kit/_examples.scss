@@ -2,18 +2,19 @@
     margin-bottom: 0;
 }
 .page-header{
-    background-color: #B2AFAB;
+    background-color: $header-background;
     background-position: center center;
     background-size: cover;
-    min-height: 100vh;
+    min-height: 60vh;
     max-height: 999px;
     overflow: hidden;
     position: relative;
+    padding: 0 100px;
     width: 100%;
     z-index: 1;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
 
     .filter::after{
         background-color: rgba(0, 0, 0, 0.5);
@@ -174,24 +175,47 @@
 
 .presentation-title{
     font-size: 8em;
-    font-weight: 700;
+    font-weight: 600;
     margin: 0;
-    color: #FFFFFF;
-    background: #fbf8ec;
-    background: -moz-linear-gradient(top, #FFFFFF 35%, #4e6773 100%);
-    background: -webkit-linear-gradient(top, #FFFFFF 35%,#4e6773 100%);
-    background: -ms-linear-gradient(top, #FFFFFF 35%,#4e6773 100%);
-    background: linear-gradient(to bottom, #FFFFFF 35%,#4e6773 100%);
+    color: #404040;
+    font-family: $font-family-serif;
+    text-align: left;
 
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    height: 134px;
+
+    cursor: pointer;
 }
+
 .presentation-subtitle{
     font-size: 1.7em;
-    color: #FFFFFF;
+    color: #404040;
 }
 
-.category-absolute{
+.presentation-cursor {
+    color: #404040!important;
+}
+
+@keyframes animated_kitty {
+    0%   {opacity: 1;}
+    50%  {opacity: 1;}
+    95%  {opacity: 1;}
+    100% {right: 100%; opacity: 0;}
+}
+
+.presentation-kitten {
+    position: absolute;
+    right: -200px;
+    opacity: 0;
+    top: calc(60vh - 100px);
+    animation: animated_kitty 5s linear;
+
+    img {
+        width: 200px;
+        height: auto;
+    }
+}
+
+.category-absolute{ 
     position: absolute;
     text-align: center;
     top: 100vh;

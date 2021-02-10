@@ -16,9 +16,16 @@
 * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
 
 */
-import React from "react";
+import React, { useEffect } from "react";
 
 // reactstrap components
+import {
+  Button,
+  Navbar,
+  NavItem,
+  NavLink,
+  Nav,
+} from "reactstrap";
 
 // core components
 import IndexNavbar from "components/Navbars/IndexNavbar.js";
@@ -40,9 +47,13 @@ import SectionLogin from "views/index-sections/SectionLogin.js";
 import SectionExamples from "views/index-sections/SectionExamples.js";
 import SectionDownload from "views/index-sections/SectionDownload.js";
 
+// projects
+import Otzi from "views/projects/Otzi.js";
+
 function Index() {
+
   document.documentElement.classList.remove("nav-open");
-  React.useEffect(() => {
+  useEffect(() => {
     document.body.classList.add("index");
     return function cleanup() {
       document.body.classList.remove("index");
@@ -50,9 +61,17 @@ function Index() {
   });
   return (
     <>
-      <IndexNavbar />
+      {/* <IndexNavbar /> */}
       <IndexHeader />
       <div className="main">
+        <Button color="info" type="button">
+          Default
+        </Button>
+        <Button className="btn-link ml-1" color="info" type="button">
+          Simple
+        </Button>
+        <Otzi />
+        {/* <SectionNavigation />
         <SectionButtons />
         <SectionNavbars />
         <SectionNavigation />
@@ -66,7 +85,7 @@ function Index() {
         <SectionLogin />
         <SectionExamples />
         <SectionDownload />
-        <DemoFooter />
+        <DemoFooter /> */}
       </div>
     </>
   );
